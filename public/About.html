@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Information</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg,#e0e7ff,#6366f1);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .card{
+        background:white;
+        width:400px;
+        max-width:90%;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0 20px 40px rgba(0,0,0,0.15);
+        transition:0.3s ease;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+    }
+
+    .card h2{
+        margin-bottom:25px;
+        font-weight:600;
+        font-size:22px;
+        color:#333;
+        border-bottom:2px solid #6366f1;
+        padding-bottom:10px;
+    }
+
+    .info-item{
+        margin-bottom:18px;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .label{
+        font-size:13px;
+        color:#777;
+        margin-bottom:4px;
+        text-transform:uppercase;
+        letter-spacing:1px;
+    }
+
+    .value{
+        font-size:15px;
+        color:#222;
+        font-weight:500;
+    }
+
+    .license{
+        margin-top:15px;
+        padding:10px;
+        background:#f3f4f6;
+        border-radius:10px;
+        font-size:14px;
+        color:#444;
+        text-align:center;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Personal Information</h2>
+
+    <div class="info-item">
+        <div class="label">Address</div>
+        <div class="value">Alain - AbuDhabi, UAE</div>
+    </div>
+
+    <div class="info-item">
+        <div class="label">Phone</div>
+        <div class="value">(+971) 542147464</div>
+    </div>
+
+    <div class="info-item">
+        <div class="label">Civil Status</div>
+        <div class="value">Single</div>
+    </div>
+
+    <div class="info-item">
+        <div class="label">Citizenship</div>
+        <div class="value">Syrian</div>
+    </div>
+
+    <div class="license">
+        Valid UAE Driver’s License
+    </div>
+
+</div>
+
+</body>
+</html>

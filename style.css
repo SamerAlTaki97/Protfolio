@@ -1,0 +1,564 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #495cff, #f3eae9);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#Title {
+    
+    border-radius: 150px;
+    /* 2. الحجم والمساحة */
+    width: 100%;
+    min-height: 50vh;
+    /* يجعل القسم يأخذ كامل ارتفاع الشاشة */
+    display: flex;
+    /* لتوسيط محتوى الـ section بالكامل */
+    align-items: flex-end;
+    justify-content: flex-start;
+    /* يبدأ المحتوى من اليسار */
+}
+.spacer {
+    height: 150px;
+    width: 100%; /* لضمان أخذ السطر كاملاً */
+}
+
+
+/* <!------------------- Title -------------------> */
+.profile-section {
+    display: flex;
+    /* هذا هو السر لوضعهم بجانب بعض */
+    align-items: center;
+    /* لتوسيط النصوص عمودياً مع نص الصورة */
+    justify-content: flex-start;
+    /* لتبدأ العناصر من اليسار */
+
+    width: 100%;
+    /* تأكد أنها تأخذ كامل العرض */
+    max-width: 1100px;
+    /* لتوحيد المحاذاة مع القسم العلوي */
+    margin: 40px auto;
+    /* لتوسيط القسم بالكامل في الشاشة وفراغ من الأعلى */
+    padding-left: 20px;
+    /* مسافة بسيطة من حافة الشاشة اليسرى */
+}
+.profile-pic {
+    width: 300px;
+    /* حجم الصورة */
+    height: 300px;
+    border-radius: 50%;
+    /* جعلها دائرية */
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    flex-shrink: 0;
+    /* يمنع الصورة من أن تصغر إذا كان النص طويلاً */
+    margin-right: 30px;
+
+}
+.text-data {
+    display: flex;
+    flex-direction: column;
+    /* ترتيب الاسم والعمل تحت بعض */
+    text-align: left;
+    /* محاذاة النص لليسار */
+}
+.main-name {
+    font-family: 'Merriweather', serif;
+    /* الخط اليدوي الذي اخترته */
+    font-size: 45px;
+    color: rgb(2, 2, 2);
+    /* اللون الوردي الغامق الموجود في الصورة */
+    margin: 0;
+    /* إزالة المسافات الافتراضية */
+}
+.job-name {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    color: rgb(2, 2, 2);
+    margin-top: 5px;
+
+}
+
+/* <!------------------- Summary -------------------> */
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    /* ترتيب العناصر تحت بعض (عمودياً) */
+    align-items: center;
+    /* توسيط العناصر أفقياً */
+    margin-top: 50px;
+    /* الفراغ بين الصورة والقسم الذي قبلها */
+    padding-bottom: 50px;
+    /* فراغ من الأسفل أيضاً */
+}
+.circular-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* فراغ بين الصورة والكتابة التي تحتها */
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+.description {
+    font-family: 'Merriweather', serif;
+    /* الخط اليدوي للوصف */
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+/* <!----------------- Body experience -----------------> */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 50px 5%;
+    background-color: #fcfcfc;
+    /* لون خلفية هادئ يبرز الإطارات */
+}
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: rgb(5, 5, 5);
+    font-weight: 900;
+}
+.headline1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+.card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    /* إطار خفيف وواضح */
+    border-radius: 16px;
+    /* حواف دائرية عصرية */
+    padding: 30px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* رأس البطاقة (المسمى الوظيفي) */
+.job-title {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: 700;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* الشركة والتاريخ  */
+.company-name {
+    font-size: 15px;
+    color: #777;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* قائمة الميزات (المسؤوليات) */
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    /* تدفع المحتوى ليملأ البطاقة */
+}
+.card-features li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* أيقونة الـ   */
+.card-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #03662a;
+    font-weight: bold;
+}
+
+/* تنسيق النصوص العريضة داخل القائمة */
+.card-features b {
+    color: #d14d72;
+    font-size: 15px;
+    display: block;
+    /* تجعل العنوان فوق الشرح */
+}
+
+/* <!-------------------- Body Education --------------------> */
+
+.education-container {
+    display: grid;
+    padding: 10px 5%;
+}
+.education-container>.card h2,
+h3 {
+    font-family: 'Merriweather', serif;
+    color: #333;
+    text-align: center;
+}
+.education-container>.card {
+    background-color: rgb(240, 235, 235);
+}
+
+
+/* <!-------------------- Core Skills --------------------> */
+
+.Skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+    padding: 50px 5%;
+    height: 500px;
+}
+.cardsk {
+    background: #e7e6e6;
+    border: 1px solid #e1e1e1;
+    /* إطار خفيف وواضح */
+    border-radius: 16px;
+    /* حواف دائرية عصرية */
+    padding: 30px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+
+}
+.skill-name {
+    font-size: 20px;
+
+    color: #000000;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: 300;
+}
+.cardsk:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+.PersonalSkills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 50px;
+    padding: 50px 5%;
+    height: 500px;
+}
+.Personalskill-name {
+    font-size: 20px;
+    color: #000000;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: 300;
+}
+.cardpsk:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+.cardpsk {
+    background: #e3e4e4;
+    border: 2px solid #c1e9f7;
+    /* إطار خفيف وواضح */
+    border-radius: 16px;
+    /* حواف دائرية عصرية */
+    padding: 30px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+
+}
+.com {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.certification-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 50px 5%;
+   
+}
+
+.certification-card{
+    background: #ebeaea;
+    border: 1px solid #e1e1e1;
+    /* إطار خفيف وواضح */
+    border-radius: 16px;
+    /* حواف دائرية عصرية */
+    padding: 30px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    
+}
+
+.view-certificate-btn{
+    background: #75838d;
+    border: 1px solid #e1e1e1;
+    /* إطار خفيف وواضح */
+    border-radius: 16px;
+    /* حواف دائرية عصرية */
+    padding: 12px 12px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    color:white ; 
+}
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+#Footercontact{
+    border-radius: 40px;
+    
+}
+.Footer-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px;
+    padding: 30px 5%;
+    
+}
+.one-footer{
+    grid-column: 1 ;   /* من العمود 1 لحد 3 */
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.copyright-footer{
+    grid-column: 1 ;  /* يمتد على كل الأعمدة */
+    grid-row: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items:last baseline;
+}
+.footer-text {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+.linkedin-footer{
+    grid-column: 4;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center ;
+    font-size: 25px;
+    
+}
+.github-footer{
+    grid-column: 5;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+    font-size: 25px;
+}
+.gmail-footer{
+    grid-column: 6;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center ;
+    font-size: 25px;
+}
+.link-btn{
+  background-color: inherit;
+    border: 1px solid inherit;
+    /* إطار خفيف وواضح */
+    border-radius: 16px;
+    /* حواف دائرية عصرية */
+    padding: 12px 12px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    color:white ;
+    font-size: 30px;
+}
+.about-btn{
+  background-color: inherit;
+    /* إطار خفيف وواضح */
+    border-radius: 50px;
+    /* حواف دائرية عصرية */
+    padding: 12px 12px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    color:inherit ;
+    font-size: 30px;
+    text-decoration: none;
+}
+.about-footer{
+    grid-column: 2; /* يمتد على كل الأعمدة */
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.about-btn>a {
+    color: #fcffff;
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+    
+}
+
+/* ============================= */
+/* ========= TABLET ============ */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  .profile-section{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-data{
+    text-align: center;
+  }
+
+  .experience-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Skills-container{
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+
+  .PersonalSkills-container{
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+
+  .certification-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ============================= */
+/* ========= MOBILE ============ */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .profile-section{
+    flex-direction: column;
+  }
+
+  .main-name{
+    text-align: center;
+  }
+
+  .job-name{
+    text-align: center;
+  }
+
+  .experience-container{
+    grid-template-columns: 1fr;
+  }
+
+  .Skills-container{
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .PersonalSkills-container{
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .certification-container{
+    grid-template-columns: 1fr;
+  }
+
+  .com{
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer يصير عمودي */
+     .Footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linkedin-footer,
+  .github-footer,
+  .gmail-footer{
+    grid-column: 1;
+    grid-row: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
